@@ -18,16 +18,22 @@ public class Main {
     // 두 배열이 정렬된 게 맞는지 확인
     // a는 정렬되지 않은 원초 배열, b는 정렬이 완료된 배열
     static boolean sortTest(int[] a, int[] b){
-        Arrays.sort(a);
-        return Arrays.equals(a, b);
+        int[] tmp = a.clone();
+        Arrays.sort(tmp);
+        return Arrays.equals(tmp, b);
+    }
+    // 테스트 케이스 생성기
+    static int[] initCase(int n){
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = (int)Math.round(Math.random()*100);
+        }
+        return arr;
     }
 
     public static void main(String[] args) {
         // 테스트 케이스를 랜덤하게 생성
-        int[] arr = new int[10000];
-        for (int i = 0; i < 10000; i++) {
-            arr[i] = (int)Math.round(Math.random()*100);
-        }
+        int[] arr = initCase(10000);
         // 실행 시간을 알기 위함
         long startTime,endTime;
 
