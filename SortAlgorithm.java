@@ -79,7 +79,7 @@ public class SortAlgorithm {
         for (int i = 1; i < result.length; i++) {
             int key = result[i];
             int j = i - 1;
-            // key보다 큰 값을 오른쪽으로 이동
+
             while (j >= 0 && result[j] > key) {
                 swap(result, j+1, j);
                 j--;
