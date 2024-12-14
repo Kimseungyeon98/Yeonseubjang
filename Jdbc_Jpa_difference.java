@@ -1,12 +1,4 @@
-import javax.sql.DataSource;
-import java.lang.reflect.Member;
-import java.sql.*;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-
-public class Example {
+public class Jdbc_Jpa_difference {
     public static void main(String[] args) {
         System.out.println("jdbc와 jpa의 설명 및 예시");
         System.out.println("jdbc와 data jdbc의 차이");
