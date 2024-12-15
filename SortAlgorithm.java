@@ -60,7 +60,7 @@ public class SortAlgorithm {
         }
     }
 
-    // 버블정렬
+    // 버블 정렬 (Bubble Sort)
     static int[] bubbleSort(int[] array){
         int[] result = array.clone();
         for (int i = 0; i < result.length-1; i++) {
@@ -73,7 +73,7 @@ public class SortAlgorithm {
         return result;
     }
 
-    // 삽입정렬
+    // 삽입 정렬 (Insertion Sort)
     static int[] insertSort(int[] array){
         int[] result = array.clone();
         for (int i = 1; i < result.length; i++) {
@@ -87,4 +87,9 @@ public class SortAlgorithm {
         }
         return result;
     }
+
+    // 셸 정렬 (Shell Sort)
+    // 합병(병합) 정렬 (Merge Sort)
+    // 힙 정렬 (Heap Sort)
+    // 퀵 정렬 (Quick Sort)
 }
