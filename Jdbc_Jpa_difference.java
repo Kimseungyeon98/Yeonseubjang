@@ -6,7 +6,6 @@ public class Jdbc_Jpa_difference {
         System.out.println("jdbc와 jpa는 결국 디비에서 데이터를 불러오는 방식의 차이이다.");
     }
 
-
     // jdbc로 db에 연결하기 위해 디비 정보를 입력해주고 connection을 가져올 수 있는 나머지 정보 생성
     /*
     public class JdbcConnector {
