@@ -36,21 +36,35 @@ public class CodingTest {
 
         // 알고리즘 구현 시작
         visited[start] = true;
-        for(int i=0; i<n-1; i++){
-
+        for(int i=1; i<n; i++){
+            renew(arr, minValue(arr[start],visited), start);
+            System.out.println("---------------" + i + "번째 시작 ---------------");
+            for(int j=1; j<=n; j++){
+                System.out.println(Arrays.toString(arr[j]));
+            }
+            System.out.println("---------------" + i + "번째 끝 ---------------");
+        }
+    }
+    static void renew(int[][] arr, int x, int y){
+        int tmp = arr[x][y];
+        for(int i=1; i<arr.length; i++){
+            if(i!=x&&i!=y&&arr[x][i]+tmp<arr[y][i]){
+                arr[y][i] = arr[x][i]+tmp;
+                arr[i][y] = arr[y][i];
+            }
         }
     }
     // 한 배열의 최소값 중 방문하지 않은 인덱스를 반환
     static int minValue(int[] arr, boolean[] visited) {
         int min = Integer.MAX_VALUE;
         //최소값 찾기
-        for(int i=0; i<arr.length; i++){
+        for(int i=1; i<arr.length; i++){
             if(arr[i]<min){
                 min = arr[i];
             }
         }
         //최소값 중 방문하지 않은 인덱스를 반환하고 방문 처리
-        for(int i=0; i<arr.length; i++){
+        for(int i=1; i<arr.length; i++){
             if(!visited[i] && arr[i]==min){
                 visited[i] = true;
                 return i;
